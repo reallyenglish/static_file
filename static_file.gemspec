@@ -5,5 +5,5 @@ Gem::Specification.new do |s|
   s.summary     = ""
   s.description = ""
   s.authors     = ["Really English"]
-  s.files       = ["lib/static_file.rb", "lib/static_file/static_file.rb", "lib/static_file/static_file_helper.rb", "lib/static_file/static_file_active_record_extension.rb"]
+  s.files       = ["lib/static_file.rb", "lib/static_file/static_file.rb", "lib/static_file/static_file_helper.rb", "lib/static_file/static_file_active_record_extensions.rb"]
 end
