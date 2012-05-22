@@ -9,13 +9,15 @@ class StaticFile
   end
 
   def base_url
-    self.class.type_urls[type]
+    @base_url ||= URI.parse(self.class.type_urls[type])
   end
 
   def url(options = {:protocol => "http"})
     if base_url
-      options.merge!(:host => base_url, :path => path, :scheme => options[:protocol])
-      url = URI::HTTP.build(options).to_s
+      p base_url.host
+      base_url.scheme = options[:protocol]
+      base_url.path = path
+      base_url.to_s
     else
       raise "unknown type: #{@type}"
     end
