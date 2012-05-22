@@ -15,7 +15,7 @@ describe StaticFile do
     it "generates a url from type & key" do
       file = StaticFile.new(:cms3_resource, "bacon.jpg")
 
-      file.url.should == "http://cms3.local/bacon.jpg"
+      file.url.should == "http://cms3.local/cms/bacon.jpg"
     end
 
     it "raises an error if type is not found" do

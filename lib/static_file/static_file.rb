@@ -14,9 +14,8 @@ class StaticFile
 
   def url(options = {:protocol => "http"})
     if base_url
-      p base_url.host
       base_url.scheme = options[:protocol]
-      base_url.path = path
+      base_url.path += path
       base_url.to_s
     else
       raise "unknown type: #{@type}"
